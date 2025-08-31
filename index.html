@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Brand</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Styles -->
+  <style>
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(to right, #6366f1, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Floating animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-white shadow z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold gradient-text">MyBrand</h1>
+      <nav class="hidden md:flex gap-8">
+        <a href="#about" class="hover:text-indigo-600 transition">About</a>
+        <a href="#services" class="hover:text-indigo-600 transition">Services</a>
+        <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+      </nav>
+      <button id="menuBtn" class="md:hidden p-2 text-indigo-600 focus:outline-none">
+        ☰
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white shadow px-6 py-4">
+      <a href="#about" class="block py-2">About</a>
+      <a href="#services" class="block py-2">Services</a>
+      <a href="#projects" class="block py-2">Projects</a>
+      <a href="#contact" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-32 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+    <h2 class="text-5xl font-extrabold mb-4 float">Hi, I'm <span class="text-yellow-300">Your Name</span></h2>
+    <p class="text-lg max-w-2xl mx-auto mb-8">I craft modern, elegant, and user-friendly web experiences that elevate personal brands and businesses.</p>
+    <a href="#contact" class="px-6 py-3 bg-white text-indigo-600 font-medium rounded-full shadow hover:bg-gray-100 transition">Let’s Connect</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-6 gradient-text">About Me</h3>
+    <p class="text-center max-w-3xl mx-auto text-gray-600 leading-relaxed">
+      I’m a creative web designer & developer with a passion for clean interfaces and delightful user experiences. 
+      I specialize in building strong personal brands and helping professionals stand out online.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-gray-100 py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12 gradient-text">What I Offer</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-3 text-indigo-600">Web Design</h4>
+          <p class="text-gray-600">Responsive and modern web design aligned with your brand’s identity.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-3 text-indigo-600">Development</h4>
+          <p class="text-gray-600">Fast, scalable, and interactive websites using modern tech stacks.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-3 text-indigo-600">Brand Strategy</h4>
+          <p class="text-gray-600">Helping professionals build impactful personal brands online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold text-center mb-12 gradient-text">Projects</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-8 bg-white rounded-2xl shadow hover:shadow-lg transition text-center">
+        <h4 class="text-xl font-semibold text-indigo-600 mb-2">Portfolio Website</h4>
+        <p class="text-gray-600">A sleek and responsive portfolio template.</p>
+      </div>
+      <div class="p-8 bg-white rounded-2xl shadow hover:shadow-lg transition text-center">
+        <h4 class="text-xl font-semibold text-indigo-600 mb-2">Startup Landing</h4>
+        <p class="text-gray-600">Landing page for a modern SaaS startup.</p>
+      </div>
+      <div class="p-8 bg-white rounded-2xl shadow hover:shadow-lg transition text-center">
+        <h4 class="text-xl font-semibold text-indigo-600 mb-2">Personal Brand</h4>
+        <p class="text-gray-600">Branding site built for creators & freelancers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-indigo-600 py-20 text-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Get In Touch</h3>
+      <p class="mb-8 text-lg">Let’s collaborate and create something amazing together!</p>
+      <form class="grid gap-4">
+        <input type="text" placeholder="Your Name" class="px-4 py-3 rounded-lg text-gray-800 w-full">
+        <input type="email" placeholder="Your Email" class="px-4 py-3 rounded-lg text-gray-800 w-full">
+        <textarea placeholder="Your Message" class="px-4 py-3 rounded-lg text-gray-800 w-full" rows="5"></textarea>
+        <button type="submit" class="px-6 py-3 bg-yellow-400 text-gray-900 font-semibold rounded-lg shadow hover:bg-yellow-300 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>© 2025 MyBrand. All rights reserved.</p>
+    <button id="darkToggle" class="mt-2 text-sm text-indigo-400 hover:text-indigo-200">Toggle Dark Mode</button>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Dark mode toggle
+    const darkToggle = document.getElementById("darkToggle");
+    darkToggle.addEventListener("click", () => {
+      document.body.classList.toggle("bg-gray-900");
+      document.body.classList.toggle("text-gray-100");
+    });
+  </script>
+</body>
+</html>
